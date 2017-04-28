@@ -1,0 +1,8 @@
+--- 
+- name: Digital Ocean
+  hosts: digitalocean
+  remote_user: ansible
+  become: true
+  become_method: sudo
+  roles:
+    - apache2

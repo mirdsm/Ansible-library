@@ -1,0 +1,23 @@
+---
+  - name: Change Port
+    lineinfile: 
+      dest: /etc/ssh/sshd_config 
+      regexp: '^Port 22' 
+      line: 'Port 443'
+  - name: Restart SSH
+    service: 
+      name: ssh 
+      state: restarted
+
+          # - name: setup selinux for alternate SSH port
+          #   seport:
+          #     ports: "443"
+          #     proto: "tcp"
+          #     setype: "ssh_port_t"
+          #     state: "present"
+
+
+        # - name: "install apache"
+        #   apt:
+        #     name: apache2
+        #     state: lastest

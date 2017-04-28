@@ -1,0 +1,9 @@
+---
+
+- name: Digital Ocean
+  hosts: xenserver
+  remote_user: ubuntu
+  become: true
+  become_method: sudo 
+  roles:
+    - ssh
