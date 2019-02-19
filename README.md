@@ -3,4 +3,4 @@
 
 Step to run the automation
 
-"ansible-playbook site.yml"
+$ ansible-playbook site.yml
