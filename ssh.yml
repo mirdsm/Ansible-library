@@ -1,9 +1,11 @@
 ---
 
-- name: Digital Ocean
-  hosts: xenserver
-  remote_user: ubuntu
+- name: VM Sebelah
+  hosts: VBOX
+  remote_user: mirdsm
   become: true
-  become_method: sudo 
+  #become_method: sudo
+  vars:
+    ansible_become_pass: asd 
   roles:
     - ssh

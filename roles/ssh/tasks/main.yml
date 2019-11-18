@@ -1,13 +1,18 @@
 ---
   - name: Change Port
     lineinfile: 
-      dest: /etc/ssh/sshd_config 
-      regexp: '^Port 22' 
-      line: 'Port 443'
-  - name: Restart SSH
-    service: 
-      name: ssh 
-      state: restarted
+      #dest: /etc/sysconfig/network-scripts/ifcfg-enp0s9 
+      dest: /etc/ssh/sshd_config
+      #regexp: '^ONBOOT' 
+      regexp: '^Port 443'
+      line: 'Port 22'
+      #line: 'ONBOOT=yes'
+
+
+#  - name: Restart SSH
+#    service: 
+#      name: ssh 
+#      state: restarted
 
           # - name: setup selinux for alternate SSH port
           #   seport:

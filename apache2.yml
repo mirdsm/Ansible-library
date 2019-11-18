@@ -1,8 +1,10 @@
 --- 
-- name: Digital Ocean
-  hosts: digitalocean
-  remote_user: ansible
+- name: Install Apache2
+  hosts: VBOX
+  remote_user: mirdsm
   become: true
-  become_method: sudo
+  vars:
+    ansible_become_pass: asd
+  #become_method: sudo
   roles:
-    - apache2
+    - apche2
